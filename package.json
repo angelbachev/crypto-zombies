@@ -1,13 +1,13 @@
 {
-  "name": "crypto-zombies-smart-contracts",
+  "name": "crypto-zombies",
   "version": "1.0.0",
-  "description": "",
+  "description": "A DApp game running on Ethereum network",
   "main": "index.js",
   "scripts": {
     "test": "npx hardhat test"
   },
   "author": "Angel Bachev",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
     "hardhat": "^2.19.1"
