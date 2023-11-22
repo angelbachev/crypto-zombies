@@ -1,5 +1,6 @@
-const {loadFixture} = require("@nomicfoundation/hardhat-toolbox/network-helpers");
-const {expect} = require("chai");
+import {loadFixture} from "@nomicfoundation/hardhat-toolbox/network-helpers";
+import { expect } from "chai";
+import { ethers } from "hardhat";
 
 describe("KittyFactory", function () {
     const kittyId = "2023466";

@@ -1,9 +1,7 @@
-const {
-    time,
-    loadFixture,
-} = require("@nomicfoundation/hardhat-toolbox/network-helpers");
-const {anyValue} = require("@nomicfoundation/hardhat-chai-matchers/withArgs");
-const {expect} = require("chai");
+import {time, loadFixture} from "@nomicfoundation/hardhat-toolbox/network-helpers";
+import { expect } from "chai";
+import { ethers } from "hardhat";
+
 
 describe("ZombieAttack", function () {
     // We define a fixture to reuse the same setup in every test.
@@ -33,7 +31,7 @@ describe("ZombieAttack", function () {
         const myZombie = await zombieAttack.zombies(0);
         const enemyZombie = await zombieAttack.zombies(1);
 
-        if (myZombie.winCount == 1) {
+        if (myZombie.winCount === ethers.getBigInt(1)) {
             expect(myZombie.lossCount).to.equal(0);
             expect(enemyZombie.lossCount).to.equal(1);
             expect(enemyZombie.winCount).to.equal(0);

@@ -1,10 +1,6 @@
-const {
-    time,
-    loadFixture,
-} = require("@nomicfoundation/hardhat-toolbox/network-helpers");
-const {anyValue} = require("@nomicfoundation/hardhat-chai-matchers/withArgs");
-const {expect} = require("chai");
-const {ethers} = require("hardhat");
+import {time, loadFixture} from "@nomicfoundation/hardhat-toolbox/network-helpers";
+import { expect } from "chai";
+import { ethers } from "hardhat";
 
 describe("ZombieHelper", function () {
     // We define a fixture to reuse the same setup in every test.

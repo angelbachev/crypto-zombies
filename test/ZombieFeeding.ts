@@ -1,5 +1,6 @@
-const {time, loadFixture} = require("@nomicfoundation/hardhat-toolbox/network-helpers");
-const {expect} = require("chai");
+import {time, loadFixture} from "@nomicfoundation/hardhat-toolbox/network-helpers";
+import { expect } from "chai";
+import { ethers } from "hardhat";
 
 describe("ZombieFeeding", function () {
     // We define a fixture to reuse the same setup in every test.

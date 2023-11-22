@@ -13,16 +13,19 @@ compile: ## Compile contracts
 	npx hardhat compile
 
 deploy: ## Deploy contracts to localhost
-	npx hardhat run scripts/deploy.js
+	npx hardhat run scripts/deploy.ts
 
 deploy-sepolia: ## Deploy contracts to sepolia test network
-	npx hardhat run scripts/deploy.js --network sepolia
+	npx hardhat run scripts/deploy.ts --network sepolia
 
 verify-sepolia: ## Verify contract on sepolia test network
 	npx hardhat verify --network sepolia $(address)
 
 tests: ## Run tests
 	npx hardhat test
+
+tests-typecheck: ## Run tests with type check
+	npx hardhat test --typecheck
 
 tests-with-gas: ## Run tests and report gas
 	REPORT_GAS=true npx hardhat test
